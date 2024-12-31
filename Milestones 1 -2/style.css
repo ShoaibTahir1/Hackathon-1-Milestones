@@ -241,3 +241,26 @@ button:hover {
     background-color: #003147;
     
 }
+
+@media(max-width: 1000px)
+{
+    .container
+    {
+        margin: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
+
+@media (max-width: 600px)
+{
+    .Objective .box
+    {
+        flex-direction: column;
+    }
+    
+    .Objective .box .year_company
+    {
+        margin-bottom: 5px;
+    }
+}
