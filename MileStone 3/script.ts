@@ -1,7 +1,7 @@
 document.getElementById("resume-form")?.addEventListener("submit", function (e) {
     e.preventDefault(); // Prevent the default form submission
 
-     // Collect input values
+    // Collect input values
     const name = (document.getElementById("name") as HTMLInputElement).value;
     const jobTitle = (document.getElementById("job-title") as HTMLInputElement).value;
     const phone = (document.getElementById("phone") as HTMLInputElement).value;
@@ -20,7 +20,7 @@ document.getElementById("resume-form")?.addEventListener("submit", function (e) 
     // Create a FileReader to read the image if it's selected
     const reader = new FileReader();
     reader.onloadend = function () {
-          // Generate the resume content dynamically with a polished format
+        // Generate the resume content dynamically with a polished format
         const resumeDisplay = document.getElementById("resume-display");
         if (resumeDisplay) {
             resumeDisplay.innerHTML = `
@@ -44,14 +44,18 @@ document.getElementById("resume-form")?.addEventListener("submit", function (e) 
                                     <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                                     <span class="text">${email}</span>
                                 </li>
+                                ${linkedin ? `
                                 <li>
                                     <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
                                     <span class="text">${linkedin}</span>
                                 </li>
+                                ` : ''}
+                                ${github ? `
                                 <li>
                                     <span class="icon"><i class="fa fa-github" aria-hidden="true"></i></span>
                                     <span class="text">${github}</span>
                                 </li>
+                                ` : ''}
                                 <li>
                                     <span class="icon"><i class="fa fa-address-book" aria-hidden="true"></i></span>
                                     <span class="text">${address}</span>
