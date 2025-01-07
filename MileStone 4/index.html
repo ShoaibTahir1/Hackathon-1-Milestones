@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Resume Builder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Editable Resume Builder By Shoaib Tahir</h1>
+    
+    <!-- Form Section -->
+    <form id="resume-form">
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>PERSONAL INFORMATION</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter Your Name" required>
+             
+            <label for="job-title">Job Title:</label>
+            <input type="text" id="job-title" placeholder="Enter Your Job Title" required>
+             
+            <label for="phone">Contact No</label>
+            <input type="tel" id="phone" placeholder="Enter Your Contact No" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter Your Email" required>
+
+            <label for="linkedin">LinkedIn:</label>
+            <input type="text" id="linkedin" placeholder="LinkedIn Profile">
+
+            <label for="github">GitHub:</label>
+            <input type="text" id="github" placeholder="GitHub Profile">
+
+            <label for="address">Address:</label>
+            <textarea id="address" placeholder="Your Address"></textarea>
+
+            <!-- Image Upload Section -->
+            <label for="profile-image">Upload Profile Image</label>
+            <input type="file" id="profile-image" accept="image/*" required>
+        </fieldset>
+
+        <!-- Objective -->
+        <fieldset>
+            <legend>OBJECTIVE</legend>
+            <textarea id="objective" placeholder="Your Career Objective" required></textarea>
+        </fieldset>
+
+        <!-- Education -->
+        <fieldset>
+            <legend>EDUCATION</legend>
+            <textarea id="education" placeholder="Enter Your Education" rows="4" required></textarea>
+        </fieldset>
+        
+        <!-- Work Experience -->
+        <fieldset>
+            <legend>WORK EXPERIENCE</legend>
+            <textarea id="experience" placeholder="Enter Your Work Experience" rows="4" required></textarea>
+        </fieldset>
+
+        <!-- Skills -->
+        <fieldset>
+            <legend>SKILLS</legend>
+            <textarea id="skills" placeholder="Enter Your Skills" rows="4" required></textarea>
+        </fieldset>
+
+        <button type="submit"><b>Generate Resume</b></button>
+    
+    </form>
+
+    <br> 
+
+    <!-- Dynamic Resume Display -->
+    <div id="resume-display">
+        <!-- Resume will be generated here -->
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
