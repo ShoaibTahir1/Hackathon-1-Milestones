@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "target": "es6", // ya "es2017" ya "esnext"
+      "lib": ["es2017", "dom"], // Add "es2017" or later
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "moduleResolution": "node", // Corrected moduleResolution
+      "paths": {
+        "jspdf": ["./node_modules/jspdf/dist/jspdf.min.js"] 
+      }
+    },
+    "include": [
+      "script.ts" // Aapke TypeScript file ka path
+    ]
+  }
